@@ -11,6 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 - pip
 - virtualenv
 - A valid configuration file (see below).
+- Missing files in the data folder: https://drive.google.com/drive/folders/1rcAz20u9rh2vW7OS8ORtgwcKRa81ys0g?usp=sharing
 
 To get **pip**: download [get-pip.py](https://bootstrap.pypa.io/get-pip.py).
 ```
