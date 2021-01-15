@@ -1,0 +1,35 @@
+{
+    "epochs": 10,
+    "dropout_rate": 0.35,
+    "revisions_file": "./data/npr.csv",
+    "train_test_split": 0.9,
+    "model_name": "dish_entity_extractor_v2",
+    "model_output_dir": "./models/v2",
+    "test_input": "./data/labeled.csv",
+    "test_output": "./data/labeled_pred.csv",
+    "review_column": "review",
+    "entities": [
+        {
+            "label": "DISH",
+            "sources": ["./data/dishes/Dish.csv"],
+            "source_column": "name",
+            "templates": "./data/templates/dish_templates.txt",
+            "max_length": 5,
+            "filter_characters": "*+#$%&/\\=()[]{}~<>!¿?°|¬;,:_",
+            "keep_before": ":;,",
+            "filter_words": ["portion"],
+            "multiplier": 1
+        },
+        {
+            "label": "RESTO",
+            "sources": ["./data/veg_restaurants/Datafiniti_Vegetarian_and_Vegan_Restaurants.csv", "./data/fast_food_restaurants/Datafiniti_Fast_Food_Restaurants.csv", "./data/fast_food_restaurants/FastFoodRestaurants.csv", "./data/michelin_restaurants/one-star-michelin-restaurants.csv", "./data/michelin_restaurants/two-stars-michelin-restaurants.csv", "./data/michelin_restaurants/three-stars-michelin-restaurants.csv", "./data/pizza_restaurants/8358_1.csv", "./data/pizza_restaurants/Datafiniti_Pizza_Restaurants_and_the_Pizza_They_Sell_May19.csv"],
+            "source_column": "name",
+            "templates": "./data/templates/restaurant_templates.txt",
+            "max_length": 5,
+            "filter_characters": "*+#$%&/\\=()[]{}~<>!¿?°|¬;,:_",
+            "keep_before": ":;,",
+            "filter_words": [],
+            "multiplier": 10
+        }
+    ]
+}
