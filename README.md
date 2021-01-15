@@ -39,6 +39,7 @@ Install requirements with pip:
 ```
 pip install -r requirements.txt
 ```
+Download the contents of data.zip into the data folder.
 
 ### Configuring
 
